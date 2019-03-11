@@ -1,4 +1,5 @@
-﻿# App - with Server Side Rendering and Code Splitting
+﻿# test-sterling-agency-front-end
+# App - with Server Side Rendering and Code Splitting
 ## Режим разробника
 ### 1. Встановити залежності
 ```
