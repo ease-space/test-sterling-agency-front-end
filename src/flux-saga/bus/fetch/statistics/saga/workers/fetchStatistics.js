@@ -19,10 +19,7 @@ export function* callFetchStatisticsWorker() {
 
     const token = yield select(state => state.fetch.user.token);
 
-    const response = yield call(
-      Api('http://192.168.1.6:3102').statistics.getStatisticsUsers,
-      token,
-    );
+    const response = yield call(Api.statistics.getStatisticsUsers, token);
     const data = yield call([response, response.json]);
 
     yield put(statisticsActions.setFetchStatisticsSuccess(data));

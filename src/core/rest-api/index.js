@@ -15,15 +15,13 @@ const getHeaders = token => {
   };
 };
 
-export const Api = () => {
-  return {
-    statistics: {
-      getStatisticsUsers(token) {
-        return fetch(`/users/statistics`, {
-          method: 'GET',
-          headers: getHeaders(token),
-        });
-      },
+export const Api = {
+  statistics: {
+    getStatisticsUsers(token) {
+      return fetch(`/users/statistics`, {
+        method: 'GET',
+        headers: getHeaders(token),
+      });
     },
-  };
+  },
 };
