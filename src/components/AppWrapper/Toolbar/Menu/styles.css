@@ -1,0 +1,49 @@
+.toolbar-menu {
+  flex: 1;
+  display: flex;
+  margin-left: var(--unitSpacing);
+  height: 100%;
+
+  &_content {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+  }
+
+  &_button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 10px 4px 4px;
+    margin-left: var(--unitSpacing);
+    color: var(--paletteTextGrey);
+    fill: var(--paletteTextGrey);
+
+    &:hover,
+    &:focus,
+    &_active {
+      fill: var(--paletteWhite);
+      color: var(--paletteWhite);
+    }
+
+    &_icon {
+      width: 20px;
+      height: 20px;
+      fill: inherit;
+    }
+
+    &_text {
+      margin-left: var(--unitSpacing);
+      color: inherit;
+
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
+}

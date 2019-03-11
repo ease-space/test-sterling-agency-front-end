@@ -1,0 +1,27 @@
+.footer {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: var(--unitSpacing);
+  background: var(--palettePrimary);
+
+  &_about {
+    padding-top: 17px;
+    padding-bottom: 10px;
+  }
+
+  &_navigation {
+    padding-top: 17px;
+    padding-bottom: 10px;
+  }
+
+  &_subscribe {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  &_other {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+}

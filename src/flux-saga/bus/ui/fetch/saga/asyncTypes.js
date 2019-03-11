@@ -1,0 +1,4 @@
+export const asyncTypes = Object.freeze({
+  SET_FETCH_EMIT_ERROR_ASYNC: 'SET_FETCH_EMIT_ERROR_ASYNC',
+  SET_FETCH_STATE_ASYNC: 'SET_FETCH_STATE_ASYNC',
+});

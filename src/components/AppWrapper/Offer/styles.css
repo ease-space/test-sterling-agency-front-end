@@ -1,0 +1,101 @@
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 140px;
+
+  &_layout {
+    background: var(--paletteWhite);
+
+    &_wrapper {
+      padding-left: 96px;
+      margin: auto 0;
+      height: 100px;
+      position: relative;
+      display: flex;
+
+      &_image {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 140px;
+        margin-left: var(--unitSpacing);
+      }
+
+      &_content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding: var(--unitSpacing);
+
+        &_text {
+          color: var(--palettePrimary);
+          font-style: normal;
+          font-weight: bold;
+          line-height: 30px;
+          font-size: 20px;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          overflow: hidden;
+          max-height: 90px;
+
+          &_v1 {
+            @media screen and (max-width: 599px) {
+              display: none;
+            }
+          }
+
+          &_v2 {
+            @media screen and (min-width: 600px) {
+              display: none;
+            }
+
+            @media screen and (max-width: 420px) {
+              display: none;
+            }
+          }
+        }
+
+        &_button {
+          height: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: var(--paletteButtonOrange);
+          border: none;
+          border-radius: 3px;
+          cursor: pointer;
+          outline: none;
+          padding: 10px 20px 10px 20px;
+          color: var(--paletteWhite);
+          fill: var(--paletteWhite);
+          margin-left: auto;
+
+          &:active {
+            background: var(--paletteButtonOrangeActive);
+          }
+
+          &_content {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            fill: inherit;
+            color: inherit;
+          }
+
+          &_icon {
+            height: 20px;
+            width: 20px;
+            fill: inherit;
+          }
+
+          &_text {
+            margin-left: 12px;
+            color: inherit;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}

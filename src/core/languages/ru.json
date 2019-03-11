@@ -1,0 +1,64 @@
+{
+  "app.page.home": "Главная",
+  "app.page.product": "Продукт",
+  "app.page.basket": "Корзина",
+  "app.page.help": "Помощь",
+  "app.page.account": "Аккаунт",
+  "app.page.collection": "Коллекция",
+
+  "app.page.notFound": "Страница не найдена",
+
+  "app.page.footer.about.aboutCompany": "TemplateMonster - это маркетплейс, на котором можно приобрести все необходимое для создания сайта. Сотни независимых разработчиков продают свои продукты у нас чтобы вы моги создать свой уникальный проект.",
+  "app.page.footer.about.buyers": "{count} покупателей",
+  "app.page.footer.about.suppliers": "{count} поставщиков",
+  "app.page.footer.about.products": "{count} продуктов",
+
+  "app.page.footer.navigation.products": "Продукты",
+  "app.page.footer.navigation.subjects": "Тематики",
+  "app.page.footer.navigation.company": "Компания",
+  "app.page.footer.navigation.support": "Поддержка",
+
+  "app.page.footer.navigation.products.wordpressTempletes": "Wordpress шаблоны",
+  "app.page.footer.navigation.products.htmlTempletes": "HTML шаблоны",
+  "app.page.footer.navigation.products.openCartTempletes": "OpenCart шаблоны",
+  "app.page.footer.navigation.products.joomlaTempletes": "Joomla шаблоны",
+  "app.page.footer.navigation.products.prestaShopTempletes": "PrestaShop шаблоны",
+  "app.page.footer.navigation.products.wooCommerceTempletes": "WooCommerce шаблоны",
+  "app.page.footer.navigation.products.websiteDesigner": "Конструктор сайтов",
+  "app.page.footer.navigation.products.magentoTempletes": "Magento шаблоны",
+
+  "app.page.footer.navigation.subjects.sitesBusinessCards": "Сайты-визитки",
+  "app.page.footer.navigation.subjects.fashionAndBeauty": "Мода и красота",
+  "app.page.footer.navigation.subjects.family": "Семья",
+  "app.page.footer.navigation.subjects.designAndPhoto": "Дизайн и фото",
+  "app.page.footer.navigation.subjects.realEstate": "Недвижимость",
+  "app.page.footer.navigation.subjects.autoAndMoto": "Авто и мото",
+  "app.page.footer.navigation.subjects.medicine": "Медицина",
+  "app.page.footer.navigation.subjects.travelAndSports": "Путешествия и спорт",
+
+  "app.page.footer.navigation.company.aboutCompany": "О компании",
+  "app.page.footer.navigation.company.webStudioDirectory": "Каталог веб-студий",
+  "app.page.footer.navigation.company.blog": "Блог",
+  "app.page.footer.navigation.company.affiliateProgram": "Партнерская программа",
+  "app.page.footer.navigation.company.contactUs": "Связаться с нами",
+  "app.page.footer.navigation.company.privacyPolicy": "Политика кофиденцийности",
+  "app.page.footer.navigation.company.returnPolicy": "Правила возврата",
+  "app.page.footer.navigation.company.terms": "Условия",
+
+  "app.page.footer.navigation.support.helpCenter": "Справочный центр",
+  "app.page.footer.navigation.support.reportSpam": "Пожаловаться на спам",
+  "app.page.footer.navigation.support.becomeSupplier": "Стать поставщиком",
+
+  "app.page.footer.subscribe.offer": "Получайте скидки и подарки каждую неделю!",
+  "app.page.footer.subscribe.email": "Email",
+  "app.page.footer.subscribe.action": "Подписаться",
+  "app.page.footer.subscribe.agreement": "Нажимая на кнопку, я принимаю на обработку моего email согласно с {linkAgreement}",
+  "app.page.footer.subscribe.agreement.linkAgreement": "Договором",
+
+  "app.page.footer.other.copyright": "@ {year} Web Templates LLC. Все права защищены",
+  "app.page.footer.other.lastUpdate": "Последнее обновление {date}",
+
+  "app.page.offer.startChat": "Начать чат",
+  "app.page.offer.text.v1": "Ищете что-то особенное? Подберите желаемое вместе с консультантом!",
+  "app.page.offer.text.v2": "Ищете что-то особенное?"
+}

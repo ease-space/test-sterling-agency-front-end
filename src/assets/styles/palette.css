@@ -1,0 +1,13 @@
+:root {
+  --palettePrimary: #243238;
+  --paletteWhite: #fff;
+  --paletteBackground: #e5e5e5;
+  --paletteTextGrey: #b0bec5;
+  --paletteError: red;
+  --paletteTextOrange: #ff8a65;
+  --paletteTextBlue: #90caf9;
+  --paletteButtonOrange: linear-gradient(360deg, #d84315 0%, #f4511e 100%);
+  --paletteButtonOrangeActive: linear-gradient(360deg, #d84315 0%, #e65100 100%);
+  --paletteButtonBlue: linear-gradient(180deg, #42f5f5 0%, #2196f3 100%);
+  --paletteButtonBlueActive: linear-gradient(180deg, #42f5f5 0%, #0277bd 100%);
+}

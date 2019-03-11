@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic');
+
+body {
+  overflow-x: hidden;
+}
+
+html,
+body,
+#appMountPoint {
+  font-family: 'PT Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 21px;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#appMountPoint {
+  display: flex;
+  flex-direction: column;
+}

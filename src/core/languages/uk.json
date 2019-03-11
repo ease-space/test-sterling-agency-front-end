@@ -1,0 +1,64 @@
+{
+  "app.page.home": "Головна",
+  "app.page.product": "Продукт",
+  "app.page.basket": "Кошик",
+  "app.page.help": "Допомога",
+  "app.page.account": "Аккаунт",
+  "app.page.collection": "Колекція",
+
+  "app.page.notFound": "Сторінку не знайдено",
+
+  "app.page.footer.about.aboutCompany": "TemplateMonster - це маркетплейс, на якому можна придбати все необхідне для створення сайту. Сотні незалежних розробників продають свої продукти в нас щоб ви моги створити свій унікальний проект.",
+  "app.page.footer.about.buyers": "{count} покупців",
+  "app.page.footer.about.suppliers": "{count} постачальників",
+  "app.page.footer.about.products": "{count} продуктів",
+
+  "app.page.footer.navigation.products": "Продукти",
+  "app.page.footer.navigation.subjects": "Тематики",
+  "app.page.footer.navigation.company": "Компанія",
+  "app.page.footer.navigation.support": "Підтримка",
+
+  "app.page.footer.navigation.products.wordpressTempletes": "Wordpress шаблони",
+  "app.page.footer.navigation.products.htmlTempletes": "HTML шаблони",
+  "app.page.footer.navigation.products.openCartTempletes": "OpenCart шаблони",
+  "app.page.footer.navigation.products.joomlaTempletes": "Joomla шаблони",
+  "app.page.footer.navigation.products.prestaShopTempletes": "PrestaShop шаблони",
+  "app.page.footer.navigation.products.wooCommerceTempletes": "WooCommerce шаблони",
+  "app.page.footer.navigation.products.websiteDesigner": "Конструктор сайтів",
+  "app.page.footer.navigation.products.magentoTempletes": "Magento шаблони",
+
+  "app.page.footer.navigation.subjects.sitesBusinessCards": "Сайти-візитки",
+  "app.page.footer.navigation.subjects.fashionAndBeauty": "Мода та краса",
+  "app.page.footer.navigation.subjects.family": "Сім`я",
+  "app.page.footer.navigation.subjects.designAndPhoto": "Дизайн і фото",
+  "app.page.footer.navigation.subjects.realEstate": "Нерухомість",
+  "app.page.footer.navigation.subjects.autoAndMoto": "Авто і мото",
+  "app.page.footer.navigation.subjects.medicine": "Медицина",
+  "app.page.footer.navigation.subjects.travelAndSports": "Подорожі та спорт",
+
+  "app.page.footer.navigation.company.aboutCompany": "Про компанію",
+  "app.page.footer.navigation.company.webStudioDirectory": "Каталог веб-студій",
+  "app.page.footer.navigation.company.blog": "Блог",
+  "app.page.footer.navigation.company.affiliateProgram": "Партнерська програма",
+  "app.page.footer.navigation.company.contactUs": "Зв`язатися з нами",
+  "app.page.footer.navigation.company.privacyPolicy": "Політика кофіденційності",
+  "app.page.footer.navigation.company.returnPolicy": "Правила повернення",
+  "app.page.footer.navigation.company.terms": "Умови",
+
+  "app.page.footer.navigation.support.helpCenter": "Довідковий центр",
+  "app.page.footer.navigation.support.reportSpam": "Поскаржитись на спам",
+  "app.page.footer.navigation.support.becomeSupplier": "Стати постачальником",
+
+  "app.page.footer.subscribe.offer": "Отримуйте знижки та подарунки щотижня!",
+  "app.page.footer.subscribe.email": "Email",
+  "app.page.footer.subscribe.action": "Підписатись",
+  "app.page.footer.subscribe.agreement": "Натискаючи на кнопку, я погоджуюсь на обробку мого email згідно з {linkAgreement}",
+  "app.page.footer.subscribe.agreement.linkAgreement": "Угодою",
+
+  "app.page.footer.other.copyright": "@ {year} Web Templates LLC. Всі права захищені",
+  "app.page.footer.other.lastUpdate": "Востаннє оновлено {date}",
+
+  "app.page.offer.startChat": "Розпочати чат",
+  "app.page.offer.text.v1": "Шукаєте щось особливе? Підберіть бажане разом з консультантом!",
+  "app.page.offer.text.v2": "Шукаєте щось особливе?"
+}

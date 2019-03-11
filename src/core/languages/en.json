@@ -1,0 +1,64 @@
+{
+  "app.page.home": "Home",
+  "app.page.product": "Product",
+  "app.page.basket": "Basket",
+  "app.page.help": "Help",
+  "app.page.account": "Account",
+  "app.page.collection": "Collection",
+
+  "app.page.notFound": "Page not found",
+
+  "app.page.footer.about.aboutCompany": "TemplateMonster - this is a market where you can buy everything you need to create a site. Hundreds of independent developers sell their products in us so you can create your own unique project.",
+  "app.page.footer.about.buyers": "{count} buyers",
+  "app.page.footer.about.suppliers": "{count} suppliers",
+  "app.page.footer.about.products": "{count} products",
+
+  "app.page.footer.navigation.products": "Products",
+  "app.page.footer.navigation.subjects": "Subjects",
+  "app.page.footer.navigation.company": "Company",
+  "app.page.footer.navigation.support": "Support",
+
+  "app.page.footer.navigation.products.wordpressTempletes": "Wordpress templates",
+  "app.page.footer.navigation.products.htmlTempletes": "HTML templates",
+  "app.page.footer.navigation.products.openCartTempletes": "OpenCart templates",
+  "app.page.footer.navigation.products.joomlaTempletes": "Joomla templates",
+  "app.page.footer.navigation.products.prestaShopTempletes": "PrestaShop templates",
+  "app.page.footer.navigation.products.wooCommerceTempletes": "WooCommerce templates",
+  "app.page.footer.navigation.products.sitesDesigner": "Website designer",
+  "app.page.footer.navigation.products.magentoTempletes": "Magento templates",
+
+  "app.page.footer.navigation.subjects.sitesBusinessCards": "Sites-business cards",
+  "app.page.footer.navigation.subjects.fashionAndBeauty": "Fashion and beauty",
+  "app.page.footer.navigation.subjects.family": "Family",
+  "app.page.footer.navigation.subjects.designAndPhoto": "Design and photo",
+  "app.page.footer.navigation.subjects.realEstate": "Real estate",
+  "app.page.footer.navigation.subjects.autoAndMoto": "Auto and moto",
+  "app.page.footer.navigation.subjects.medicine": "Medicine",
+  "app.page.footer.navigation.subjects.travelAndSports": "Travel and Sports",
+
+  "app.page.footer.navigation.company.aboutCompany": "About company",
+  "app.page.footer.navigation.company.webStudioDirectory": "Web studio directory",
+  "app.page.footer.navigation.company.blog": "Blog",
+  "app.page.footer.navigation.company.affiliateProgram": "Affiliate program",
+  "app.page.footer.navigation.company.contactUs": "Contact us",
+  "app.page.footer.navigation.company.privacyPolicy": "Privacy policy",
+  "app.page.footer.navigation.company.returnPolicy": "Return policy",
+  "app.page.footer.navigation.company.terms": "Terms",
+
+  "app.page.footer.navigation.support.helpCenter": "Help Center",
+  "app.page.footer.navigation.support.reportSpam": "Report spam",
+  "app.page.footer.navigation.support.becomeSupplier": "Become a supplier",
+
+  "app.page.footer.subscribe.offer": "Get discounts and gifts every week!",
+  "app.page.footer.subscribe.email": "Email",
+  "app.page.footer.subscribe.action": "Subscribe",
+  "app.page.footer.subscribe.agreement": "By clicking on the button, I agree to handle my email in accordance with {linkAgreement}",
+  "app.page.footer.subscribe.agreement.linkAgreement": "Agreement",
+
+  "app.page.footer.other.copyright": "@ {year} Web Templates LLC. All rights reserved",
+  "app.page.footer.other.lastUpdate": "Last updated {date}",
+
+  "app.page.offer.startChat": "Start chat",
+  "app.page.offer.text.v1": "Looking something special? Pick up with your advisor!",
+  "app.page.offer.text.v2": "Looking something special?"
+}

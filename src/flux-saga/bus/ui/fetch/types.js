@@ -1,0 +1,4 @@
+export const types = Object.freeze({
+  SET_FETCH_EMIT_ERROR_STATE: 'SET_FETCH_EMIT_ERROR_STATE',
+  SET_FETCH_STATE: 'SET_FETCH_STATE',
+});

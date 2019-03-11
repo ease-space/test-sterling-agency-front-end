@@ -1,0 +1,122 @@
+.subscribe {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: var(--unitSpacing);
+  margin-right: var(--unitSpacing);
+
+  &_offer {
+    flex: 1;
+    display: flex;
+    margin-top: var(--unitSpacing);
+    min-width: 150px;
+
+    &_icon {
+      width: 20px;
+      height: 20px;
+      min-width: 20px;
+      margin-right: var(--unitSpacing);
+    }
+
+    &_title {
+      display: inline-flex;
+      font-weight: bold;
+      color: var(--paletteWhite);
+    }
+  }
+
+  &_main {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    margin-left: 28px;
+    margin-right: 28px;
+    margin-top: var(--unitSpacing);
+
+    &_form {
+      flex: 1;
+      display: inline-flex;
+      max-width: 350px;
+      height: 40px;
+      background: #eceff1;
+      border-radius: 3px;
+      align-items: center;
+      overflow: hidden;
+      box-shadow: inset 0 1px 0 #cfd8dc;
+
+      &_error {
+        box-shadow: 0 0 8px var(--paletteError);
+      }
+
+      &_icon {
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+        margin-left: 20px;
+        fill: var(--paletteTextGrey);
+      }
+
+      &_input {
+        flex: 1;
+        display: flex;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        padding: var(--unitSpacing);
+        background: #eceff1;
+        width: 100%;
+        min-width: 60px;
+
+        &:invalid {
+          box-shadow: none;
+        }
+      }
+
+      &_button {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--paletteButtonBlue);
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        outline: none;
+        padding: 10px 20px 10px 20px;
+        color: var(--paletteWhite);
+        fill: var(--paletteWhite);
+        margin-left: auto;
+
+        &:active {
+          background: var(--paletteButtonBlueActive);
+        }
+      }
+    }
+  }
+
+  &_agreement {
+    flex: 1;
+    display: flex;
+    color: var(--paletteTextGrey);
+    line-height: 18px;
+    font-size: 12px;
+    margin-top: var(--unitSpacing);
+    min-width: 150px;
+
+    &_link {
+      color: var(--paletteTextBlue);
+
+      &:link {
+        text-decoration: none;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: var(--paletteTextOrange);
+      }
+    }
+  }
+}

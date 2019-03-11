@@ -1,0 +1,17 @@
+.app-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: var(--paletteBackground);
+
+  &_toolbar {
+    height: var(--toolbarHeight);
+  }
+
+  &_main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}

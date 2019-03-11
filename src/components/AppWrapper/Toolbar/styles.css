@@ -1,0 +1,56 @@
+.toolbar {
+  position: fixed;
+  z-index: 1100;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: var(--palettePrimary);
+  padding-left: var(--unitSpacing);
+  padding-right: var(--unitSpacing);
+
+  &_content {
+    flex: 1;
+    display: flex;
+    max-width: 90%;
+    align-items: center;
+
+    @media screen and (max-width: 450px) {
+      max-width: 100%;
+    }
+
+    &_logo-large {
+      height: 30px;
+      min-width: 200px;
+      fill: var(--paletteWhite);
+
+      &:hover,
+      &:focus,
+      &_active {
+        fill: var(--paletteTextGrey);
+      }
+
+      @media screen and (max-width: 450px) {
+        display: none;
+      }
+    }
+
+    &_logo-small {
+      height: 30px;
+      min-width: 40px;
+      fill: var(--paletteWhite);
+
+      &:hover,
+      &:focus,
+      &_active {
+        fill: var(--paletteTextGrey);
+      }
+
+      @media screen and (min-width: 450px) {
+        display: none;
+      }
+    }
+  }
+}

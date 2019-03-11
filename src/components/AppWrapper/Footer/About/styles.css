@@ -1,0 +1,38 @@
+.footer-about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  color: var(--paletteTextGrey);
+
+  &_logo-large {
+    height: 30px;
+    max-width: 200px;
+    fill: var(--paletteWhite);
+    margin: 0 auto;
+  }
+
+  &_about-company {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  &_successes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: var(--unitSpacing);
+
+    &_success {
+      margin-left: 20px;
+      margin-right: 20px;
+
+      &_count {
+        color: var(--paletteTextOrange);
+        font-weight: bold;
+        margin-right: var(--unitSpacing);
+      }
+    }
+  }
+}
