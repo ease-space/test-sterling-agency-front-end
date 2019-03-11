@@ -54,7 +54,7 @@ NODE_ENV, BUILD_ENV, HOST, PORT_HTTP
 
 ### Параметри за замовчуванням:
 ```
-HOST = local ip, PORT_HTTP = 3002
+HOST = localhost, PORT_HTTP = 3002
 ```
 
 ## Запуск MASTER
@@ -96,5 +96,5 @@ NODE_ENV, BUILD_ENV, HOST, PORT_HTTP
 
 ### Параметри за замовчуванням:
 ```
-HOST = local ip, PORT_HTTP = 3002
+HOST = localhost, PORT_HTTP = 3002
 ```

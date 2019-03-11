@@ -1,3 +1,5 @@
+// import { eventChannel, END } from 'redux-saga';
+
 import { statisticsActions } from '../../actions';
 import { fetchActionsAsync } from '../../../../ui/fetch/saga/asyncActions';
 
@@ -6,6 +8,22 @@ import { types } from '../../types';
 import { Api } from '../../../../../../core/rest-api/index';
 
 import { put, call, select } from 'redux-saga/effects';
+
+// function countdown(secs) {
+//   return eventChannel(emitter => {
+//     const interval = setInterval(() => {
+//       secs -= 1;
+//       if (secs > 0) {
+//         emitter(secs);
+//       } else {
+//         emitter(END);
+//       }
+//     }, 1000);
+//     return () => {
+//       clearInterval(interval);
+//     };
+//   });
+// }
 
 export function* callFetchStatisticsWorker() {
   try {
