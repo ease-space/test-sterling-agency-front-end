@@ -1,9 +1,7 @@
-import { constants as build } from '../../../webpack/common/constants';
-
 export const constants = Object.freeze({
   APP_NAME: 'TemplateMonster',
 
-  API_URL: `http://${build.HOST}:${build.PORT_HTTP + 100}`,
+  API_URL: 'http://localhost:3102',
 
   PATCH_URL_HOME: '/',
   PATCH_URL_PRODUCT: '/product',

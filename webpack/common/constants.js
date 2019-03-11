@@ -1,5 +1,3 @@
-import Ip from 'ip';
-
 const getNodeEnv = () => {
   return process.env.NODE_ENV || 'development';
 };
@@ -21,7 +19,7 @@ const getPortHttp = () => {
 };
 
 const getHost = () => {
-  return process.env.HOST || Ip.address();
+  return process.env.HOST || 'localhost';
 };
 
 export const constants = Object.freeze({

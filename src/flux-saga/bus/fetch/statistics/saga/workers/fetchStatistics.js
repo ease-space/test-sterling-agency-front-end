@@ -3,7 +3,9 @@ import { fetchActionsAsync } from '../../../../ui/fetch/saga/asyncActions';
 
 import { types } from '../../types';
 
-import { put, delay } from 'redux-saga/effects';
+import { Api } from '../../../../../../core/rest-api/index';
+
+import { put, call, select } from 'redux-saga/effects';
 
 export function* callFetchStatisticsWorker() {
   try {
@@ -15,15 +17,15 @@ export function* callFetchStatisticsWorker() {
       }),
     );
 
-    console.log('FETCH STATISTICS START');
+    const token = yield select(state => state.fetch.user.token);
 
-    yield delay(1000);
-
-    console.log('FETCH STATISTICS COMPLETE');
-
-    yield put(
-      statisticsActions.setFetchStatisticsSuccess({ count_online: 965 }),
+    const response = yield call(
+      Api('http://192.168.1.6:3102').statistics.getStatisticsUsers,
+      token,
     );
+    const data = yield call([response, response.json]);
+
+    yield put(statisticsActions.setFetchStatisticsSuccess(data));
   } catch (error) {
     yield put(statisticsActions.setFetchStatisticsError());
     yield put(

@@ -24,7 +24,7 @@ let openedBrowser = false;
 
 const done = (protocolHttp, listenerHttp) => {
   setTimeout(() => {
-    const addressHttp = `${protocolHttp}://${listenerHttp.address().address}:${
+    const addressHttp = `${protocolHttp}://${build.HOST}:${
       listenerHttp.address().port
     }`;
     console.log(
