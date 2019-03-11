@@ -74,7 +74,7 @@ class About extends Component {
       onClickStatistics,
     } = this.props;
 
-    const formatNumber = number => new Intl.NumberFormat('en').format(number);
+    const formatNumber = number => new Intl.NumberFormat('uk').format(number);
 
     const countBuyersText = (
       <b className="footer-about_successes_success_count">
