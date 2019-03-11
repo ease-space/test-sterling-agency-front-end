@@ -1,6 +1,7 @@
 import { eventChannel, END } from 'redux-saga';
 
 import { statisticsActions } from '../../actions';
+import { statisticsActionsAsync as uiStatisticsActionsAsync } from '../../../../ui/statistics/saga/asyncActions';
 import { fetchActionsAsync } from '../../../../ui/fetch/saga/asyncActions';
 
 import { types } from '../../types';
@@ -43,7 +44,11 @@ export function* callFetchStatisticsWorker() {
         const response = yield call(Api.statistics.getStatisticsUsers, token);
         const data = yield call([response, response.json]);
 
-        yield put(statisticsActions.setFetchStatisticsSuccess(data));
+        const countOnline = data['count_online'];
+        yield put(statisticsActions.setFetchStatisticsSuccess({ countOnline }));
+        yield put(
+          uiStatisticsActionsAsync.setStatisticsOnlineMapAsync(countOnline),
+        );
       } catch (error) {
         yield put(statisticsActions.setFetchStatisticsError());
         yield put(
