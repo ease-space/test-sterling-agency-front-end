@@ -60,7 +60,7 @@ class About extends Component {
     buyers: PropTypes.number.isRequired,
     suppliers: PropTypes.number.isRequired,
     products: PropTypes.number.isRequired,
-    online: PropTypes.number.isRequired,
+    countOnline: PropTypes.number.isRequired,
   };
 
   render() {
@@ -70,33 +70,33 @@ class About extends Component {
       buyers,
       suppliers,
       products,
-      online,
+      countOnline,
       onClickStatistics,
     } = this.props;
 
     const formatNumber = number => new Intl.NumberFormat('en').format(number);
 
-    const countBuyers = (
+    const countBuyersText = (
       <b className="footer-about_successes_success_count">
         {formatNumber(buyers)}
       </b>
     );
 
-    const countSuppliers = (
+    const countSuppliersText = (
       <b className="footer-about_successes_success_count">
         {formatNumber(suppliers)}
       </b>
     );
 
-    const countProducts = (
+    const countProductsText = (
       <b className="footer-about_successes_success_count">
         {formatNumber(products)}
       </b>
     );
 
-    const countOnline = (
+    const countOnlineText = (
       <b className="footer-about_successes_success_count">
-        {formatNumber(online)}
+        {formatNumber(countOnline)}
       </b>
     );
 
@@ -122,7 +122,7 @@ class About extends Component {
               id={messages.suppliers.id}
               defaultMessage={messages.suppliers.defaultMessage}
               values={{
-                count: countBuyers,
+                count: countBuyersText,
               }}
             />
           </div>
@@ -131,7 +131,7 @@ class About extends Component {
               id={messages.products.id}
               defaultMessage={messages.products.defaultMessage}
               values={{
-                count: countSuppliers,
+                count: countSuppliersText,
               }}
             />
           </div>
@@ -140,7 +140,7 @@ class About extends Component {
               id={messages.buyers.id}
               defaultMessage={messages.buyers.defaultMessage}
               values={{
-                count: countProducts,
+                count: countProductsText,
               }}
             />
           </div>
@@ -149,7 +149,7 @@ class About extends Component {
               id={messages.online.id}
               defaultMessage={messages.online.defaultMessage}
               values={{
-                count: countOnline,
+                count: countOnlineText,
               }}
             />
           </div>
