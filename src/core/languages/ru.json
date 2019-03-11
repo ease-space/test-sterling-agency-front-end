@@ -5,6 +5,7 @@
   "app.page.help": "Помощь",
   "app.page.account": "Аккаунт",
   "app.page.collection": "Коллекция",
+  "app.page.statistics": "Статистика",
 
   "app.page.notFound": "Страница не найдена",
 
@@ -12,6 +13,9 @@
   "app.page.footer.about.buyers": "{count} покупателей",
   "app.page.footer.about.suppliers": "{count} поставщиков",
   "app.page.footer.about.products": "{count} продуктов",
+  "app.page.footer.about.online": "{count} в магазине",
+  "app.page.footer.about.statistics.action": "Посмотреть полную {link}",
+  "app.page.footer.about.statistics.action.link": "Статистику",
 
   "app.page.footer.navigation.products": "Продукты",
   "app.page.footer.navigation.subjects": "Тематики",

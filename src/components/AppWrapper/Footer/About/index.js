@@ -14,6 +14,8 @@ import './styles.css';
 
 import SvgLogoLarge from '../../../SvgImage/Logo/Large';
 
+import { withPageHelper } from '../../../../hok/withPageHelper';
+
 const messages = defineMessages({
   aboutCompany: {
     id: 'app.page.footer.about.aboutCompany',
@@ -32,21 +34,45 @@ const messages = defineMessages({
     id: 'app.page.footer.about.products',
     defaultMessage: '{count} продуктів',
   },
+  online: {
+    id: 'app.page.footer.about.online',
+    defaultMessage: '{count} online',
+  },
+  statisticsAction: {
+    id: 'app.page.footer.about.statistics.action',
+    defaultMessage: 'Переглянути повну {link}',
+  },
+  statisticsActionLink: {
+    id: 'app.page.footer.about.statistics.action.link',
+    defaultMessage: 'Статистику',
+  },
 });
 
-@compose(curryRight(injectIntl))
+@compose(
+  withPageHelper,
+  curryRight(injectIntl),
+)
 class About extends Component {
   static propTypes = {
     intl: intlShape,
     className: PropTypes.string,
+    onClickStatistics: PropTypes.func,
     buyers: PropTypes.number.isRequired,
     suppliers: PropTypes.number.isRequired,
     products: PropTypes.number.isRequired,
+    online: PropTypes.number.isRequired,
   };
 
   render() {
     const { formatMessage } = this.props.intl;
-    const { className, buyers, suppliers, products } = this.props;
+    const {
+      className,
+      buyers,
+      suppliers,
+      products,
+      online,
+      onClickStatistics,
+    } = this.props;
 
     const formatNumber = number => new Intl.NumberFormat('en').format(number);
 
@@ -68,6 +94,22 @@ class About extends Component {
       </b>
     );
 
+    const countOnline = (
+      <b className="footer-about_successes_success_count">
+        {formatNumber(online)}
+      </b>
+    );
+
+    const linkStatistics = (
+      <a
+        className="footer-about_statistics_link"
+        href="javascript:void(0)"
+        onClick={onClickStatistics}
+      >
+        {formatMessage(messages.statisticsActionLink)}
+      </a>
+    );
+
     return (
       <div className={classNames(['footer-about', className])}>
         <SvgLogoLarge className="footer-about_logo-large" />
@@ -77,8 +119,8 @@ class About extends Component {
         <div className="footer-about_successes">
           <div className="footer-about_successes_success">
             <FormattedMessage
-              id={messages.buyers.id}
-              defaultMessage={messages.buyers.defaultMessage}
+              id={messages.suppliers.id}
+              defaultMessage={messages.suppliers.defaultMessage}
               values={{
                 count: countBuyers,
               }}
@@ -86,8 +128,8 @@ class About extends Component {
           </div>
           <div className="footer-about_successes_success">
             <FormattedMessage
-              id={messages.buyers.id}
-              defaultMessage={messages.buyers.defaultMessage}
+              id={messages.products.id}
+              defaultMessage={messages.products.defaultMessage}
               values={{
                 count: countSuppliers,
               }}
@@ -102,6 +144,24 @@ class About extends Component {
               }}
             />
           </div>
+          <div className="footer-about_successes_success">
+            <FormattedMessage
+              id={messages.online.id}
+              defaultMessage={messages.online.defaultMessage}
+              values={{
+                count: countOnline,
+              }}
+            />
+          </div>
+        </div>
+        <div className="footer-about_statistics">
+          <FormattedMessage
+            id={messages.statisticsAction.id}
+            defaultMessage={messages.statisticsAction.defaultMessage}
+            values={{
+              link: linkStatistics,
+            }}
+          />
         </div>
       </div>
     );

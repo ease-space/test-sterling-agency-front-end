@@ -37,6 +37,10 @@ export const withPageHelper = Enchanced => {
       id: 'app.page.collection',
       defaultMessage: 'Колекція',
     },
+    statistics: {
+      id: 'app.page.statistics',
+      defaultMessage: 'Статистика',
+    },
   });
 
   const mapDispatchToProps = dispatch => {
@@ -97,6 +101,9 @@ export const withPageHelper = Enchanced => {
         case constants.PATCH_URL_COLLECTION:
           return formatMessage(messages.collection);
 
+        case constants.PATCH_URL_STATISTICS:
+          return formatMessage(messages.statistics);
+
         default:
           return '';
       }
@@ -145,6 +152,12 @@ export const withPageHelper = Enchanced => {
       actions.setRouterToLinkAsync(constants.PATCH_URL_COLLECTION);
     };
 
+    handleOnClickStatistics = () => {
+      const { actions } = this.props;
+      this.handleCloseMobileHeaderMenu();
+      actions.setRouterToLinkAsync(constants.PATCH_URL_STATISTICS);
+    };
+
     handleClickBack = () => {
       const { actions, lastActionRouter } = this.props;
       if (lastActionRouter === 'POP') {
@@ -167,6 +180,7 @@ export const withPageHelper = Enchanced => {
           onClickHelp={this.handleOnClickHelp}
           onClickAccount={this.handleOnClickAccount}
           onClickCollection={this.handleOnClickCollection}
+          onClickStatistics={this.handleOnClickStatistics}
           onClickBack={this.handleClickBack}
           {...this.props}
         />

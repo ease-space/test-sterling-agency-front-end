@@ -28,6 +28,7 @@ class Routes extends Component {
     const help = import('../../containers/Pages/Public/Help');
     const collection = import('../../containers/Pages/Public/Collection');
     const account = import('../../containers/Pages/Private/Account');
+    const statistics = import('../../containers/Pages/Public/Statistics');
 
     const Page = props => {
       const { dynamicImport, isLoading } = props;
@@ -85,6 +86,12 @@ class Routes extends Component {
           exact
           path={constants.PATCH_URL_COLLECTION}
           component={props => <Page dynamicImport={collection} {...props} />}
+        />
+
+        <Route
+          exact
+          path={constants.PATCH_URL_STATISTICS}
+          component={props => <Page dynamicImport={statistics} {...props} />}
         />
 
         {isAuthenticatedInterface(authUser) && (

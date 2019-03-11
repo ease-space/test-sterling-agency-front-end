@@ -7,9 +7,10 @@ import About from '../../../../components/AppWrapper/Footer/About/index';
 
 const mapStateToProps = state => {
   return {
-    buyers: state.ui.footer.buyers,
-    suppliers: state.ui.footer.suppliers,
-    products: state.ui.footer.products,
+    buyers: state.ui.statistics.buyers,
+    suppliers: state.ui.statistics.suppliers,
+    products: state.ui.statistics.products,
+    online: state.ui.statistics.online,
   };
 };
 
@@ -20,10 +21,11 @@ class AboutContainer extends Component {
     buyers: PropTypes.number,
     suppliers: PropTypes.number,
     products: PropTypes.number,
+    online: PropTypes.number,
   };
 
   render() {
-    const { className, buyers, suppliers, products } = this.props;
+    const { className, buyers, suppliers, products, online } = this.props;
 
     return (
       <About
@@ -31,6 +33,7 @@ class AboutContainer extends Component {
         buyers={buyers}
         suppliers={suppliers}
         products={products}
+        online={online}
       />
     );
   }

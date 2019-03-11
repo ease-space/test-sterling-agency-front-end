@@ -35,4 +35,25 @@
       }
     }
   }
+
+  &_statistics {
+    margin-top: 15px;
+    text-align: center;
+
+    &_link {
+      color: var(--paletteTextBlue);
+
+      &:link {
+        text-decoration: none;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &:active {
+        color: var(--paletteTextOrange);
+      }
+    }
+  }
 }

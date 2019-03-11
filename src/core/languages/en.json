@@ -5,6 +5,7 @@
   "app.page.help": "Help",
   "app.page.account": "Account",
   "app.page.collection": "Collection",
+  "app.page.statistics": "Statistics",
 
   "app.page.notFound": "Page not found",
 
@@ -12,6 +13,9 @@
   "app.page.footer.about.buyers": "{count} buyers",
   "app.page.footer.about.suppliers": "{count} suppliers",
   "app.page.footer.about.products": "{count} products",
+  "app.page.footer.about.online": "{count} in shop",
+  "app.page.footer.about.statistics.action": "View full {link}",
+  "app.page.footer.about.statistics.action.link": "Statistics",
 
   "app.page.footer.navigation.products": "Products",
   "app.page.footer.navigation.subjects": "Subjects",
