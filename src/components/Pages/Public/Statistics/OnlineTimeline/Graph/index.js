@@ -136,8 +136,8 @@ class Graph extends Component {
 
     for (let i = 0; i <= countVerticalStep; i++) {
       const step = Math.trunc(i * realStep - gridLineWeight / 2);
-      if (step > 0) {
-        const x = step + valuesPanelWeight;
+      if (width - step > realTextWidth * 2 && step > 0) {
+        const x = width - step + valuesPanelWeight;
         this.rect({
           ctx,
           x: x,
@@ -146,7 +146,7 @@ class Graph extends Component {
           height: height,
           fillStyle: colorGrid,
         });
-        const textValue = ((countVerticalStep - i + 1) * -valueInY).toString();
+        const textValue = (i * -valueInY).toString();
         this.text({
           ctx,
           x: x - realTextWidth * textValue.length,
@@ -160,7 +160,7 @@ class Graph extends Component {
 
     for (let i = 0; i <= countHorizontalStep; i++) {
       const step = Math.trunc(i * realStep - gridLineWeight / 2);
-      if (step > 0) {
+      if (height - step > realTextHeight && step > 0) {
         const y = height - step + valuesPanelWeight;
         this.rect({
           ctx,
