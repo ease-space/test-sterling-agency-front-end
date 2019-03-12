@@ -1,0 +1,10 @@
+.statistics {
+  flex: 1;
+  display: flex;
+
+  &_online {
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
