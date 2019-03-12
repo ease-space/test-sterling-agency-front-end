@@ -146,7 +146,7 @@ class Graph extends Component {
           height: height,
           fillStyle: colorGrid,
         });
-        const textValue = ((countVerticalStep - i + 1) * valueInY).toString();
+        const textValue = ((countVerticalStep - i + 1) * -valueInY).toString();
         this.text({
           ctx,
           x: x - realTextWidth * textValue.length,
