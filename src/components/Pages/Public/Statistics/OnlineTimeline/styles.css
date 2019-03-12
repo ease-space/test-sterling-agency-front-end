@@ -1,4 +1,9 @@
-.timeline {
+.online {
   flex: 1;
   display: flex;
+
+  &_timeline {
+    display: flex;
+    flex-direction: column;
+  }
 }

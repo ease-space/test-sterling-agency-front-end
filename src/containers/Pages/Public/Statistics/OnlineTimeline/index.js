@@ -15,6 +15,13 @@ const mapStateToProps = state => {
 class OnlineTimelineContainer extends Component {
   static propTypes = {
     className: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
+    axisLineWeight: PropTypes.number,
+    step: PropTypes.number,
+    scale: PropTypes.number,
+    colorAxis: PropTypes.string,
+    colorGrid: PropTypes.string,
     onlineMap: PropTypes.array,
   };
 
