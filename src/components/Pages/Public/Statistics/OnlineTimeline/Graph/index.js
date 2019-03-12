@@ -4,19 +4,6 @@ import classNames from 'classnames';
 
 import './styles.css';
 
-const rect = props => {
-  const { ctx, x, y, width, height, fillStyle } = props;
-  ctx.fillStyle = fillStyle;
-  ctx.fillRect(x, y, width, height);
-};
-
-const text = props => {
-  const { ctx, x, y, fillStyle, text, fontSize } = props;
-  ctx.fillStyle = fillStyle;
-  ctx.font = `normal ${fontSize}px PT Sans`;
-  ctx.fillText(text, x, y);
-};
-
 class Graph extends Component {
   static propTypes = {
     className: PropTypes.string,
@@ -56,6 +43,19 @@ class Graph extends Component {
     this.updateCanvas();
   }
 
+  rect = props => {
+    const { ctx, x, y, width, height, fillStyle } = props;
+    ctx.fillStyle = fillStyle;
+    ctx.fillRect(x, y, width, height);
+  };
+
+  text = props => {
+    const { ctx, x, y, fillStyle, text, fontSize } = props;
+    ctx.fillStyle = fillStyle;
+    ctx.font = `normal ${fontSize}px PT Sans`;
+    ctx.fillText(text, x, y);
+  };
+
   updateCanvas() {
     const {
       width,
@@ -93,7 +93,7 @@ class Graph extends Component {
     const realTextHeight = (fontSizeReal * 0.8) / 2;
     const realTextWidth = (fontSizeReal * 0.6) / 2;
 
-    rect({
+    this.rect({
       ctx,
       x: valuesPanelWeight,
       y: valuesPanelWeight,
@@ -101,7 +101,7 @@ class Graph extends Component {
       height: height,
       fillStyle: colorAxis,
     });
-    rect({
+    this.rect({
       ctx,
       x: width - axisLineWeight + valuesPanelWeight,
       y: valuesPanelWeight,
@@ -109,7 +109,7 @@ class Graph extends Component {
       height: height,
       fillStyle: colorAxis,
     });
-    rect({
+    this.rect({
       ctx,
       x: valuesPanelWeight,
       y: valuesPanelWeight,
@@ -117,7 +117,7 @@ class Graph extends Component {
       height: axisLineWeight,
       fillStyle: colorAxis,
     });
-    rect({
+    this.rect({
       ctx,
       x: valuesPanelWeight,
       y: height - axisLineWeight + valuesPanelWeight,
@@ -130,7 +130,7 @@ class Graph extends Component {
       const step = Math.trunc(i * realStep - gridLineWeight / 2);
       if (width - step > axisLineWeight && step > 0) {
         const x = step + valuesPanelWeight;
-        rect({
+        this.rect({
           ctx,
           x: x,
           y: valuesPanelWeight,
@@ -139,7 +139,7 @@ class Graph extends Component {
           fillStyle: colorGrid,
         });
         const textValue = (i * valueInY).toString();
-        text({
+        this.text({
           ctx,
           x: x - realTextWidth * textValue.length,
           y: (valuesPanelWeight - (valuesPanelWeight - realTextHeight * 2)) * 2,
@@ -154,7 +154,7 @@ class Graph extends Component {
       const step = Math.trunc(i * realStep - gridLineWeight / 2);
       if (height - step > axisLineWeight && step > 0) {
         const y = height - step + valuesPanelWeight;
-        rect({
+        this.rect({
           ctx,
           x: valuesPanelWeight,
           y: y,
@@ -162,7 +162,7 @@ class Graph extends Component {
           height: gridLineWeight,
           fillStyle: colorGrid,
         });
-        text({
+        this.text({
           ctx,
           x: 0,
           y: y + realTextHeight,

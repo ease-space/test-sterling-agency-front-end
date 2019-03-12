@@ -25,14 +25,14 @@ class OnlineTimeline extends Component {
   handleClickZoomIn = () => {
     this.setState(({ scale }) => {
       const newScale = scale * 1.25;
-      return { scale: newScale <= 2 ? newScale : scale };
+      return { scale: newScale <= 2.5 ? newScale : scale };
     });
   };
 
   handleClickZoomOut = () => {
     this.setState(({ scale }) => {
       const newScale = scale / 1.25;
-      return { scale: newScale >= 0.7 ? newScale : scale };
+      return { scale: newScale >= 0.5 ? newScale : scale };
     });
   };
 
