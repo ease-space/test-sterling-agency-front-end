@@ -43,7 +43,7 @@ class Graph extends Component {
     valueInY: 5,
     scale: 1,
     fontSize: 14,
-    valuesPanelWeight: 35,
+    valuesPanelWeight: 30,
     colorAxis: '#2196f3',
     colorGrid: '#90caf9',
   };
@@ -142,7 +142,7 @@ class Graph extends Component {
         text({
           ctx,
           x: x - realTextWidth * textValue.length,
-          y: valuesPanelWeight - realTextHeight * 2,
+          y: (valuesPanelWeight - (valuesPanelWeight - realTextHeight * 2)) * 2,
           text: textValue,
           fontSize: fontSizeReal,
           fillStyle: colorAxis,
