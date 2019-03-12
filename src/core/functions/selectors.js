@@ -8,3 +8,12 @@ export const getFetchingWithReselect = createSelector(
     return fetching;
   },
 );
+
+export const getOnlineMap = state => state.ui.statistics.onlineMap;
+
+export const getOnlineMapWithReselect = createSelector(
+  [getOnlineMap],
+  fetching => {
+    return fetching;
+  },
+);

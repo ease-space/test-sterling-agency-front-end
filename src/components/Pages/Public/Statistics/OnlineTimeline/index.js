@@ -6,6 +6,9 @@ import './styles.css';
 
 import Graph from '../../../../../containers/Pages/Public/Statistics/OnlineTimeline/Graph';
 
+import SvgZoomIn from '../../../../SvgImage/ZoomIn';
+import SvgZoomOut from '../../../../SvgImage/ZoomOut';
+
 class OnlineTimeline extends Component {
   static propTypes = {
     className: PropTypes.string,
@@ -21,13 +24,15 @@ class OnlineTimeline extends Component {
 
   handleClickZoomIn = () => {
     this.setState(({ scale }) => {
-      return { scale: scale * 1.25 };
+      const newScale = scale * 1.25;
+      return { scale: newScale <= 2 ? newScale : scale };
     });
   };
 
   handleClickZoomOut = () => {
     this.setState(({ scale }) => {
-      return { scale: scale / 1.25 };
+      const newScale = scale / 1.25;
+      return { scale: newScale >= 0.7 ? newScale : scale };
     });
   };
 
@@ -36,11 +41,23 @@ class OnlineTimeline extends Component {
     const { scale } = this.state;
 
     return (
-      <div className={classNames(['online', className])}>
-        <div className="online_timeline">
+      <div className={classNames(['statistics-online', className])}>
+        <div className="statistics-online_timeline">
           <Graph onlineMap={onlineMap} scale={scale} />
-          <button onClick={this.handleClickZoomIn}>Збільшити</button>
-          <button onClick={this.handleClickZoomOut}>Зменшити</button>
+          <div className="statistics-online_timeline_action">
+            <button
+              className="statistics-online_timeline_action_button"
+              onClick={this.handleClickZoomIn}
+            >
+              <SvgZoomIn className="statistics-online_timeline_action_button_icon" />
+            </button>
+            <button
+              className="statistics-online_timeline_action_button"
+              onClick={this.handleClickZoomOut}
+            >
+              <SvgZoomOut className="statistics-online_timeline_action_button_icon" />
+            </button>
+          </div>
         </div>
       </div>
     );

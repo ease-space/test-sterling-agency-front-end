@@ -10,4 +10,6 @@
   --paletteButtonOrangeActive: linear-gradient(360deg, #d84315 0%, #e65100 100%);
   --paletteButtonBlue: linear-gradient(180deg, #42f5f5 0%, #2196f3 100%);
   --paletteButtonBlueActive: linear-gradient(180deg, #42f5f5 0%, #0277bd 100%);
+  --paletteGraphAxis: #2196f3;
+  --paletteGraphGrid: #90caf9;
 }

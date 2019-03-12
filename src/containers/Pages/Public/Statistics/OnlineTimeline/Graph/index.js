@@ -19,7 +19,11 @@ class GraphContainer extends Component {
     height: PropTypes.number,
     axisLineWeight: PropTypes.number,
     step: PropTypes.number,
+    valueInX: PropTypes.number,
+    valueInY: PropTypes.number,
     scale: PropTypes.number,
+    fontSize: PropTypes.number,
+    valuesPanelWeight: PropTypes.number,
     colorAxis: PropTypes.string,
     colorGrid: PropTypes.string,
     onlineMap: PropTypes.array,
@@ -32,7 +36,11 @@ class GraphContainer extends Component {
       height,
       axisLineWeight,
       step,
+      valueInX,
+      valueInY,
       scale,
+      fontSize,
+      valuesPanelWeight,
       colorAxis,
       colorGrid,
       onlineMap,
@@ -45,9 +53,13 @@ class GraphContainer extends Component {
         height={height}
         axisLineWeight={axisLineWeight}
         step={step}
+        valueInX={valueInX}
+        valueInY={valueInY}
         scale={scale}
         colorAxis={colorAxis}
         colorGrid={colorGrid}
+        fontSize={fontSize}
+        valuesPanelWeight={valuesPanelWeight}
         onlineMap={onlineMap}
       />
     );

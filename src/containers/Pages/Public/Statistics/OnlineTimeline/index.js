@@ -5,9 +5,11 @@ import { connect } from 'react-redux';
 
 import OnlineTimeline from '../../../../../components/Pages/Public/Statistics/OnlineTimeline/index';
 
+import { getOnlineMapWithReselect } from '../../../../../core/functions/selectors';
+
 const mapStateToProps = state => {
   return {
-    onlineMap: state.ui.statistics.onlineMap,
+    onlineMap: getOnlineMapWithReselect(state),
   };
 };
 

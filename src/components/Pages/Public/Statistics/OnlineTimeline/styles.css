@@ -1,9 +1,38 @@
-.online {
+.statistics-online {
   flex: 1;
   display: flex;
 
   &_timeline {
     display: flex;
     flex-direction: column;
+
+    &_action {
+      display: inline-flex;
+      margin: 0 auto;
+      padding: var(--unitSpacing);
+
+      &_button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        outline: none;
+        fill: var(--paletteGraphAxis);
+        margin: var(--unitSpacing);
+
+        &:hover,
+        &:focus,
+        &_active {
+          fill: var(--paletteGraphGrid);
+        }
+
+        &_icon {
+          width: 20px;
+          height: 20px;
+          min-width: 20px;
+          fill: inherit;
+        }
+      }
+    }
   }
 }

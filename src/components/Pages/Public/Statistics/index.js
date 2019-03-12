@@ -11,9 +11,7 @@ class Statistics extends Component {
     return (
       <Wrapper>
         <div className="statistics">
-          <div className="statistics_online">
-            <OnlineTimeline />
-          </div>
+          <OnlineTimeline />
         </div>
       </Wrapper>
     );
