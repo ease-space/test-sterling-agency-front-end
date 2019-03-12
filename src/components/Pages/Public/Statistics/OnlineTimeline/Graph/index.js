@@ -7,6 +7,11 @@ import './styles.css';
 class Graph extends Component {
   static propTypes = {
     className: PropTypes.string,
+    actions: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+      PropTypes.string,
+    ]),
     width: PropTypes.number,
     height: PropTypes.number,
     axisLineWeight: PropTypes.number,
@@ -175,7 +180,7 @@ class Graph extends Component {
   }
 
   render() {
-    const { className, width, height, valuesPanelWeight } = this.props;
+    const { className, width, height, valuesPanelWeight, actions } = this.props;
 
     const realWidth = width + valuesPanelWeight;
     const realHeight = height + valuesPanelWeight;
@@ -187,6 +192,7 @@ class Graph extends Component {
           width={realWidth}
           height={realHeight}
         />
+        {actions && <div className="graph_actions">{actions}</div>}
       </div>
     );
   }

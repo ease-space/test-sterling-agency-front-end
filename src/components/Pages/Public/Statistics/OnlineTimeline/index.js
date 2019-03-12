@@ -43,21 +43,26 @@ class OnlineTimeline extends Component {
     return (
       <div className={classNames(['statistics-online', className])}>
         <div className="statistics-online_timeline">
-          <Graph onlineMap={onlineMap} scale={scale} />
-          <div className="statistics-online_timeline_action">
-            <button
-              className="statistics-online_timeline_action_button"
-              onClick={this.handleClickZoomIn}
-            >
-              <SvgZoomIn className="statistics-online_timeline_action_button_icon" />
-            </button>
-            <button
-              className="statistics-online_timeline_action_button"
-              onClick={this.handleClickZoomOut}
-            >
-              <SvgZoomOut className="statistics-online_timeline_action_button_icon" />
-            </button>
-          </div>
+          <Graph
+            onlineMap={onlineMap}
+            scale={scale}
+            actions={
+              <div className="statistics-online_timeline_action">
+                <button
+                  className="statistics-online_timeline_action_button"
+                  onClick={this.handleClickZoomIn}
+                >
+                  <SvgZoomIn className="statistics-online_timeline_action_button_icon" />
+                </button>
+                <button
+                  className="statistics-online_timeline_action_button"
+                  onClick={this.handleClickZoomOut}
+                >
+                  <SvgZoomOut className="statistics-online_timeline_action_button_icon" />
+                </button>
+              </div>
+            }
+          />
         </div>
       </div>
     );

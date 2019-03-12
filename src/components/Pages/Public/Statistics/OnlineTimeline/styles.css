@@ -8,8 +8,6 @@
 
     &_action {
       display: inline-flex;
-      margin: 0 auto;
-      padding: var(--unitSpacing);
 
       &_button {
         background: transparent;

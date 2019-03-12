@@ -15,6 +15,11 @@ const mapStateToProps = state => {
 class GraphContainer extends Component {
   static propTypes = {
     className: PropTypes.string,
+    actions: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+      PropTypes.string,
+    ]),
     width: PropTypes.number,
     height: PropTypes.number,
     axisLineWeight: PropTypes.number,
@@ -32,6 +37,7 @@ class GraphContainer extends Component {
   render() {
     const {
       className,
+      actions,
       width,
       height,
       axisLineWeight,
@@ -49,6 +55,7 @@ class GraphContainer extends Component {
     return (
       <Graph
         className={className}
+        actions={actions}
         width={width}
         height={height}
         axisLineWeight={axisLineWeight}
