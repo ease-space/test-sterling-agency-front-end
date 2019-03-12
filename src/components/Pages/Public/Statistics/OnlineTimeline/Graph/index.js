@@ -74,7 +74,10 @@ class Graph extends Component {
       valuesPanelWeight,
       colorAxis,
       colorGrid,
+      onlineMap,
     } = this.props;
+
+    console.log(onlineMap);
 
     const realWidth = width + valuesPanelWeight;
     const realHeight = height + valuesPanelWeight;
@@ -133,7 +136,7 @@ class Graph extends Component {
 
     for (let i = 0; i <= countVerticalStep; i++) {
       const step = Math.trunc(i * realStep - gridLineWeight / 2);
-      if (width - step > axisLineWeight && step > 0) {
+      if (step > 0) {
         const x = step + valuesPanelWeight;
         this.rect({
           ctx,
@@ -143,7 +146,7 @@ class Graph extends Component {
           height: height,
           fillStyle: colorGrid,
         });
-        const textValue = (i * valueInY).toString();
+        const textValue = ((countVerticalStep - i + 1) * valueInY).toString();
         this.text({
           ctx,
           x: x - realTextWidth * textValue.length,
@@ -157,7 +160,7 @@ class Graph extends Component {
 
     for (let i = 0; i <= countHorizontalStep; i++) {
       const step = Math.trunc(i * realStep - gridLineWeight / 2);
-      if (height - step > axisLineWeight && step > 0) {
+      if (step > 0) {
         const y = height - step + valuesPanelWeight;
         this.rect({
           ctx,
