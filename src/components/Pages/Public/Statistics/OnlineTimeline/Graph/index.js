@@ -31,8 +31,8 @@ class Graph extends Component {
     height: 300,
     axisLineWeight: 2,
     step: 40,
-    valueInX: 100,
-    valueInY: 5,
+    valueInX: 5,
+    valueInY: 100,
     scale: 1,
     fontSize: 14,
     valuesPanelWeight: 30,
@@ -61,6 +61,21 @@ class Graph extends Component {
     ctx.fillText(text, x, y);
   };
 
+  drawLine = props => {
+    const { ctx, strokeStyle, lineWidth, map } = props;
+    ctx.beginPath();
+    for (let i = 0; i < map.length; i++) {
+      if (i === 0) {
+        ctx.moveTo(map[i].x, map[i].y);
+      } else {
+        ctx.lineTo(map[i].x, map[i].y);
+      }
+    }
+    ctx.lineWidth = lineWidth;
+    ctx.strokeStyle = strokeStyle;
+    ctx.stroke();
+  };
+
   updateCanvas() {
     const {
       width,
@@ -77,13 +92,8 @@ class Graph extends Component {
       onlineMap,
     } = this.props;
 
-    console.log(onlineMap);
-
     const realWidth = width + valuesPanelWeight;
     const realHeight = height + valuesPanelWeight;
-
-    const ctx = this.canvas.getContext('2d');
-    ctx.clearRect(0, 0, realWidth, realHeight);
 
     const realStep = Math.trunc(step * scale);
     const countVerticalStep = Math.trunc(width / realStep);
@@ -101,8 +111,35 @@ class Graph extends Component {
     const realTextHeight = (fontSizeReal * 0.8) / 2;
     const realTextWidth = (fontSizeReal * 0.6) / 2;
 
+    const maxEl = (countVerticalStep + 1) * valueInX;
+    let onlineMapNormalized = [];
+    if (onlineMap.length > maxEl) {
+      for (let i = onlineMap.length - 1; i >= 0; i--) {
+        if (i > onlineMap.length - 1 - maxEl) {
+          onlineMapNormalized.push({ ...onlineMap[i] });
+        }
+      }
+    } else {
+      onlineMapNormalized = [...onlineMap].reverse();
+    }
+
+    const onlineMapAxis = onlineMapNormalized.map((point, index) => {
+      const pxStepPointX = (realStep / valueInX) * index;
+      const pxStepPointY = realStep / valueInY;
+      return {
+        ...point,
+        x: realWidth - pxStepPointX,
+        y: realHeight - point.countOnline * pxStepPointY,
+      };
+    });
+
+    const ctxAxis = this.canvasAxis.getContext('2d');
+    ctxAxis.clearRect(0, 0, realWidth, realHeight);
+    const ctxLine = this.canvasLine.getContext('2d');
+    ctxLine.clearRect(0, 0, realWidth, realHeight);
+
     this.rect({
-      ctx,
+      ctx: ctxAxis,
       x: valuesPanelWeight,
       y: valuesPanelWeight,
       width: axisLineWeight,
@@ -110,7 +147,7 @@ class Graph extends Component {
       fillStyle: colorAxis,
     });
     this.rect({
-      ctx,
+      ctx: ctxAxis,
       x: width - axisLineWeight + valuesPanelWeight,
       y: valuesPanelWeight,
       width: axisLineWeight,
@@ -118,7 +155,7 @@ class Graph extends Component {
       fillStyle: colorAxis,
     });
     this.rect({
-      ctx,
+      ctx: ctxAxis,
       x: valuesPanelWeight,
       y: valuesPanelWeight,
       width: width,
@@ -126,7 +163,7 @@ class Graph extends Component {
       fillStyle: colorAxis,
     });
     this.rect({
-      ctx,
+      ctx: ctxAxis,
       x: valuesPanelWeight,
       y: height - axisLineWeight + valuesPanelWeight,
       width: width,
@@ -139,16 +176,16 @@ class Graph extends Component {
       if (width - step > realTextWidth * 2 && step > 0) {
         const x = width - step + valuesPanelWeight;
         this.rect({
-          ctx,
+          ctx: ctxAxis,
           x: x,
           y: valuesPanelWeight,
           width: 1,
           height: height,
           fillStyle: colorGrid,
         });
-        const textValue = (i * -valueInY).toString();
+        const textValue = (i * -valueInX).toString();
         this.text({
-          ctx,
+          ctx: ctxAxis,
           x: x - realTextWidth * textValue.length,
           y: (valuesPanelWeight - (valuesPanelWeight - realTextHeight * 2)) * 2,
           text: textValue,
@@ -163,7 +200,7 @@ class Graph extends Component {
       if (height - step > realTextHeight && step > 0) {
         const y = height - step + valuesPanelWeight;
         this.rect({
-          ctx,
+          ctx: ctxAxis,
           x: valuesPanelWeight,
           y: y,
           width: width,
@@ -171,14 +208,23 @@ class Graph extends Component {
           fillStyle: colorGrid,
         });
         this.text({
-          ctx,
+          ctx: ctxAxis,
           x: 0,
           y: y + realTextHeight,
-          text: i * valueInX,
+          text: i * valueInY,
           fontSize: fontSizeReal,
           fillStyle: colorAxis,
         });
       }
+
+      this.drawLine({
+        ctx: ctxLine,
+        map: onlineMapAxis,
+        lineWidth: 2,
+        strokeStyle: colorAxis,
+      });
+      ctxLine.clearRect(0, 0, realWidth, valuesPanelWeight);
+      ctxLine.clearRect(0, 0, valuesPanelWeight, realHeight);
     }
   }
 
@@ -191,7 +237,13 @@ class Graph extends Component {
     return (
       <div className={classNames(['graph', className])}>
         <canvas
-          ref={element => (this.canvas = element)}
+          ref={element => (this.canvasAxis = element)}
+          width={realWidth}
+          height={realHeight}
+        />
+        <canvas
+          className="graph_canvans-line"
+          ref={element => (this.canvasLine = element)}
           width={realWidth}
           height={realHeight}
         />
