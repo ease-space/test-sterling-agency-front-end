@@ -15,7 +15,7 @@ const isBuildDev = () => {
 };
 
 const getPortHttp = () => {
-  return process.env.PORT_HTTP || 3196;
+  return process.env.PORT_HTTP || 3197;
 };
 
 const getHost = () => {
